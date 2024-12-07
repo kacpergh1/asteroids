@@ -6,6 +6,8 @@ from asteroidfield import AsteroidField
 from asteroid import Asteroid
 import sys
 from shots import Shot
+from powerup import PowerUp
+
 
 def main():
     pygame.init()  # Initialize pygame modules
@@ -20,12 +22,13 @@ def main():
     drawable = pygame.sprite.Group()
     asteroids = pygame.sprite.Group()
     shots = pygame.sprite.Group()
+    powerups = pygame.sprite.Group()
 
     Shot.containers = (shots, updatable, drawable)
     Player.containers = (updatable, drawable)
     Asteroid.containers = (asteroids, updatable, drawable)
     AsteroidField.containers = (updatable,)
-
+    PowerUp.containers = (updatable,drawable)
 
     x = SCREEN_WIDTH / 2
     y = SCREEN_HEIGHT / 2
