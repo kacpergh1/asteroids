@@ -28,7 +28,7 @@ def main():
     Player.containers = (updatable, drawable)
     Asteroid.containers = (asteroids, updatable, drawable)
     AsteroidField.containers = (updatable,)
-    PowerUp.containers = (updatable,drawable)
+    PowerUp.containers = (powerups, updatable,drawable)
 
     x = SCREEN_WIDTH / 2
     y = SCREEN_HEIGHT / 2
@@ -57,7 +57,10 @@ def main():
                 if shot.collides_with(asteroid):
                     shot.kill()
                     asteroid.split()
-
+        for powerup in powerups:
+            if player.collides_with(powerup):
+                print("Upgrade!")
+                upgrade(player)
         
         pygame.display.flip()  # Update the display
     

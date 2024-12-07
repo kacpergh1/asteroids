@@ -5,6 +5,7 @@ import random
 
 
 class PowerUp(CircleShape):
+    containers = None
 
     def __init__(self, x, y, radius):
         # Use just one parent class initialization
