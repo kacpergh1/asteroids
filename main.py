@@ -44,8 +44,7 @@ def main():
         screen.fill((0, 0, 0))  # Clear the screen with black
         
         
-        for sprite in drawable:
-            sprite.draw(screen)
+         drawable.draw(screen)
         
         dt = clock.tick(60) / 1000  # Ensure we get the delta time in seconds
         updatable.update(dt)  # Update all "updatable" objects
