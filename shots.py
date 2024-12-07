@@ -19,5 +19,3 @@ class Shot(CircleShape):
         self.position += self.velocity * dt
         # Update the rect to match this new position
         self.update_rect()
-
-    def upgrade(self,):
