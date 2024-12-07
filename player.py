@@ -96,12 +96,6 @@ class Player(CircleShape):
        
         self.shooting_timer = PLAYER_SHOOT_COOLDOWN
         
-        def upgrade(self,):
+    def upgrade(self):
         
 
-
-        
-
-
-        
-       
