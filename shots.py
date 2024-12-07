@@ -20,4 +20,4 @@ class Shot(CircleShape):
         # Update the rect to match this new position
         self.update_rect()
 
-    def upgrade(self, )
+    def upgrade(self,):
